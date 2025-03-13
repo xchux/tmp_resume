@@ -1,7 +1,9 @@
-const isProd = process.env.NODE_ENV === 'production'
-
 module.exports = {
-  output: isProd ? 'export' : undefined,
+  output: 'export',
   reactStrictMode: true,
-  assetPrefix: isProd ? 'https://xchux.github.io/tmp_resume/' : undefined
+  assetPrefix: 'https://xchux.github.io/tmp_resume/' ,
+  images: {
+    unoptimized: true,
+  },
+
 }
