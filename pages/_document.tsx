@@ -12,8 +12,6 @@ class MyDocument extends Document {
                     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
                     <meta name="description" content="Perfect for showcasing professional background in a CV/Resume format, highlighting skills, experiences, and achievements." />
 
-                    {/* <!-- Title --> */}
-                    <title>Resume</title>
                     {/* <!-- Theme Check and Update --> */}
                     <script>
                         const html = document.querySelector('html');

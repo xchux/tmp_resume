@@ -1,4 +1,5 @@
 import { translatoinSchemaType } from "@/types/page";
+import Link from "next/link";
 import { useState } from "react";
 
 const Navbar = (transation: translatoinSchemaType) => {
@@ -31,10 +32,10 @@ const Navbar = (transation: translatoinSchemaType) => {
                 {/* "hidden hs-collapse overflow-hidden transition-all duration-300 basis-full grow md:block" */}
                 <div id="hs-navbar-header-floating" className={`${isOpen ? "block" : "hidden"} md:block transition-all duration-300 basis-full grow md:block`} aria-labelledby="hs-navbar-header-floating-collapse">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-end gap-2 md:gap-3 mt-3 md:mt-0 py-2 md:py-0 md:ps-7">
-                        <a className="py-0.5 md:py-3 px-4 md:px-1 border-s-2 md:border-s-0 md:border-b-2 border-gray-800 font-medium text-gray-800 focus:outline-none dark:border-neutral-200 dark:text-neutral-200" href="#" aria-current="page">{transation.data.profile.title}</a>
-                        <a className="py-0.5 md:py-3 px-4 md:px-1 border-s-2 md:border-s-0 md:border-b-2 border-transparent text-gray-500 hover:text-gray-800 focus:outline-none dark:text-neutral-400 dark:hover:text-neutral-200" href="#work-experience">{transation.data.workExperience.title}</a>
-                        <a className="py-0.5 md:py-3 px-4 md:px-1 border-s-2 md:border-s-0 md:border-b-2 border-transparent text-gray-500 hover:text-gray-800 focus:outline-none dark:text-neutral-400 dark:hover:text-neutral-200" href="#education">{transation.data.education.title}</a>
-                        <a className="py-0.5 md:py-3 px-4 md:px-1 border-s-2 md:border-s-0 md:border-b-2 border-transparent text-gray-500 hover:text-gray-800 focus:outline-none dark:text-neutral-400 dark:hover:text-neutral-200" href="#skills">{transation.data.skills.title}</a>
+                        <Link className="py-0.5 md:py-3 px-4 md:px-1 border-s-2 md:border-s-0 md:border-b-2 border-gray-800 font-medium text-gray-800 focus:outline-none dark:border-neutral-200 dark:text-neutral-200" href="#" aria-current="page">{transation.data.profile.title}</Link>
+                        <Link className="py-0.5 md:py-3 px-4 md:px-1 border-s-2 md:border-s-0 md:border-b-2 border-transparent text-gray-500 hover:text-gray-800 focus:outline-none dark:text-neutral-400 dark:hover:text-neutral-200" href="#work-experience">{transation.data.workExperience.title}</Link>
+                        <Link className="py-0.5 md:py-3 px-4 md:px-1 border-s-2 md:border-s-0 md:border-b-2 border-transparent text-gray-500 hover:text-gray-800 focus:outline-none dark:text-neutral-400 dark:hover:text-neutral-200" href="#education">{transation.data.education.title}</Link>
+                        <Link className="py-0.5 md:py-3 px-4 md:px-1 border-s-2 md:border-s-0 md:border-b-2 border-transparent text-gray-500 hover:text-gray-800 focus:outline-none dark:text-neutral-400 dark:hover:text-neutral-200" href="#skills">{transation.data.skills.title}</Link>
                         <div className="relative">
                             <button className="py-0.5 md:py-3 px-4 md:px-1 border-s-2 md:border-s-0 md:border-b-2 border-transparent text-gray-500 hover:text-gray-800 focus:outline-none dark:text-neutral-400 dark:hover:text-neutral-200 flex items-center" onClick={() => setIsLangOpen(!isLangOpen)}>
                                 {transation.data.language.title}
@@ -44,8 +45,8 @@ const Navbar = (transation: translatoinSchemaType) => {
                             </button>
                             {isLangOpen && (
                                 <div className="absolute right-0 mt-2 w-48 bg-white border border-gray-200 rounded-md shadow-lg dark:bg-neutral-900 dark:border-neutral-700">
-                                    <a className="block px-4 py-2 text-gray-800 hover:bg-gray-200 dark:text-neutral-200 dark:hover:bg-neutral-700" href="/en">English</a>
-                                    <a className="block px-4 py-2 text-gray-800 hover:bg-gray-200 dark:text-neutral-200 dark:hover:bg-neutral-700" href="/zh-TW">中文</a>
+                                    <Link className="block px-4 py-2 text-gray-800 hover:bg-gray-200 dark:text-neutral-200 dark:hover:bg-neutral-700" href="/en">English</Link>
+                                    <Link className="block px-4 py-2 text-gray-800 hover:bg-gray-200 dark:text-neutral-200 dark:hover:bg-neutral-700" href="/zh-TW">中文</Link>
                                 </div>
                             )}
                         </div>
