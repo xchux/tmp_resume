@@ -1,7 +1,9 @@
 module.exports = {
   output: 'export',
   reactStrictMode: true,
-  assetPrefix: 'https://xchux.github.io/tmp_resume/' ,
+  basePath: "/tmp_resume",
+  assetPrefix: "/tmp_resume",
+  distDir: "out",
   images: {
     unoptimized: true,
   },
